@@ -16,6 +16,8 @@ if (isWin) {
   process.exit(0);
 }
 
+console.log('======================= AZAAZA DEBUG=======================', baseDir, releaseDir, );
+
 var childProcess = require('child_process');
 
 try {
