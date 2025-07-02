@@ -8,8 +8,13 @@
 # Get script directory
 scriptdir=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 
-pushd ./deps/librdkafka &> /dev/null
+pushd ./deps/librdkafka
+
+
+echo "= =========================== DEBUG FROM CONFIGURE ======================================"
+pwd; ls -lah
+echo "============================= END DEBUG FROM CONFIGURE =================================="
 
 ./configure --prefix="${scriptdir}/build/deps" --libdir="${scriptdir}/build/deps" $*
 
-popd &> /dev/null
+popd
